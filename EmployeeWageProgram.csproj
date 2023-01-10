@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComputeEmployeeWage.cs" />
+    <Compile Include="ComputeEmpWages.cs" />
     <Compile Include="DailyWage.cs" />
     <Compile Include="EmployeeCheckAttendance.cs" />
     <Compile Include="EmpWageSwitchCase.cs" />
