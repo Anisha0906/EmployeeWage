@@ -46,6 +46,7 @@
     <Compile Include="ComputeEmpWages.cs" />
     <Compile Include="DailyWage.cs" />
     <Compile Include="EmployeeCheckAttendance.cs" />
+    <Compile Include="EmpWageBuilder.cs" />
     <Compile Include="EmpwageForMultipleCompany.cs" />
     <Compile Include="EmpWages.cs" />
     <Compile Include="EmpWageSwitchCase.cs" />

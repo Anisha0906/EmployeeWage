@@ -13,7 +13,7 @@ namespace EmployeeWageProgram
             Console.WriteLine("Welcome To Employee Wage");
             Console.WriteLine("Choose Option\n 1.Check Absent or Present\t 2.Calculate Daily Wage\t 3.Part Time Wage\t 4.Emp Wage for month\t" +
                 " 5.Total Employee Wages For Month\t 6.Compute Employeewage using class and method\t " +
-                "7.Emp Wage for Multiple Company\t 8.Save Total wage for each company");
+                "7.Emp Wage for Multiple Company\t 8.Save Total wage for each company \n9.EmpWageBuilder");
              int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -50,6 +50,13 @@ namespace EmployeeWageProgram
                     Console.WriteLine(BMW.ToString());
                     TCS.ComputeEmployeeWage();
                     Console.WriteLine(TCS.ToString());
+                    break;
+                case 9:
+                    EmpWageBuilder empWageBuilderArray = new EmpWageBuilder();
+                    empWageBuilderArray.addCompanyEmpWage("TATA", 20, 2, 10);
+                    empWageBuilderArray.addCompanyEmpWage("BMW", 10, 4, 20);
+                    empWageBuilderArray.addCompanyEmpWage("TCS", 10, 4, 20);
+                    empWageBuilderArray.computeEmpWage();
                     break;
 
                 default:
