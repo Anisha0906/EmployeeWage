@@ -13,7 +13,7 @@ namespace EmployeeWageProgram
             Console.WriteLine("Welcome To Employee Wage");
             Console.WriteLine("Choose Option\n 1.Check Absent or Present\t 2.Calculate Daily Wage\t 3.Part Time Wage\t 4.Emp Wage for month\t" +
                 " 5.Total Employee Wages For Month\t 6.Compute Employeewage using class and method\t " +
-                "7.Emp Wage for Multiple Company\t 8.Ability to save wage for each company\t 9.Ability to manage employee wage for multiple companies ");
+                "7.Emp Wage for Multiple Company\t 8.Save Total wage for each company \n9.EmpWageBuilder");
              int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -40,19 +40,25 @@ namespace EmployeeWageProgram
                     EmpwageForMultipleCompany.CalculateMultipleCoWage("BigBazar", 10, 4, 20);
                     break;
                 case 8:
-                    AbilityToSaveWageforEachCompany TCS = new AbilityToSaveWageforEachCompany("TCS", 20, 20, 100);
-                    AbilityToSaveWageforEachCompany infosis = new AbilityToSaveWageforEachCompany("Infosis", 20, 30, 100);
-                    TCS.computeEmpWage();
+                    EmpWages TATA = new EmpWages("TATA", 20, 20, 100);
+                    EmpWages BMW = new EmpWages("BMW", 20, 20, 100);
+                    EmpWages TCS = new EmpWages("TCS", 20, 20, 100);
+
+                    TATA.ComputeEmployeeWage();
+                    Console.WriteLine(TATA.ToString());
+                    BMW.ComputeEmployeeWage();
+                    Console.WriteLine(BMW.ToString());
+                    TCS.ComputeEmployeeWage();
                     Console.WriteLine(TCS.ToString());
-                    infosis.computeEmpWage();
-                    Console.WriteLine(infosis.ToString());
                     break;
                 case 9:
-                    AbilityToManageEmployeeWageMultipleCompanies abilityToManageEmployeeWageMultipleCompanies = new AbilityToManageEmployeeWageMultipleCompanies();
-                    abilityToManageEmployeeWageMultipleCompanies.addCompanyEmpWage("DMart", 20, 20, 100);
-                    abilityToManageEmployeeWageMultipleCompanies.addCompanyEmpWage("Infosis", 15, 20, 100);
-                    abilityToManageEmployeeWageMultipleCompanies.computeEmpWage();
+                    EmpWageBuilder empWageBuilderArray = new EmpWageBuilder();
+                    empWageBuilderArray.addCompanyEmpWage("TATA", 20, 2, 10);
+                    empWageBuilderArray.addCompanyEmpWage("BMW", 10, 4, 20);
+                    empWageBuilderArray.addCompanyEmpWage("TCS", 10, 4, 20);
+                    empWageBuilderArray.computeEmpWage();
                     break;
+
                 default:
                     Console.WriteLine("Entered Wrong Choice");
                     break;
