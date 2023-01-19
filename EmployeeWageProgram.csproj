@@ -50,6 +50,7 @@
     <Compile Include="EmpwageForMultipleCompany.cs" />
     <Compile Include="EmpWages.cs" />
     <Compile Include="EmpWageSwitchCase.cs" />
+    <Compile Include="IComputeEmpWage.cs" />
     <Compile Include="PartTimeWage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
